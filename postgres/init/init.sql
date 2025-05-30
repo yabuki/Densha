@@ -48,9 +48,9 @@ DROP TABLE IF EXISTS kenpo_money;
 CREATE TABLE kenpo_money (
   table_version smallint NOT NULL, -- テーブルのバージョン
   grade smallint NOT NULL, -- 等級
-  base money NOT NULL, -- 標準報酬月額
-  lowerValue money, -- 報酬月額(以上)
-  highValue money, -- 報酬月額(以下)
+  base decimal(14,2) NOT NULL, -- 標準報酬月額
+  lowerValue decimal(14,2), -- 報酬月額(以上)
+  highValue decimal(14,2), -- 報酬月額(以下)
   unique (table_version, grade, base) -- テーブルのバージョン、等級および標準月額報酬はユニーク
 );
 
@@ -59,9 +59,9 @@ DROP TABLE IF EXISTS kousei_money;
 CREATE TABLE kousei_money (
   table_version smallint NOT NULL, -- テーブルのバージョン
   grade smallint NOT NULL, -- 等級
-  base money NOT NULL, -- 標準報酬月額
-  lowerValue money, -- 報酬月額(以上)
-  highValue money, -- 報酬月額(以下)
+  base decimal(14,2) NOT NULL, -- 標準報酬月額
+  lowerValue decimal(14,2), -- 報酬月額(以上)
+  highValue decimal(14,2), -- 報酬月額(以下)
   unique (table_version, grade, base) -- テーブルのバージョン、等級および標準月額報酬はユニーク
 );
 
