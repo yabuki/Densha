@@ -137,3 +137,5 @@ dist
 
 # Deno
 deno.lock
+# drizzle
+drizzle/
