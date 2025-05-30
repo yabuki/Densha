@@ -136,4 +136,4 @@ dist
 .pnp.*
 
 # Deno
-deno.jsonc
+deno.lock
