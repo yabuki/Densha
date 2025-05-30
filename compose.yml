@@ -1,0 +1,21 @@
+version: '3'
+services:
+  postgres:
+    build: . # Dockerfileを使う
+    container_name: sample-db
+      # image: postgres:17
+    restart: always
+    ports: 
+      - "5432:5432"
+    volumes:
+      - ./postgres/init:/docker-entrypoint-initdb.d
+      # 永続化が必要なら、下記のpostgres_dataのコメントを外せ
+      # - postgres_data:/var/lib/postgresql/data # データ永続化のためボリュームを追加推奨
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+        # POSTGRES_DB: "sample_db" # DB名をここで指定
+      TZ: "Asia/Tokyo"         # コンテナのタイムゾーン設定
+      PGTZ: "Asia/Tokyo"       # PostgreSQL内部のタイムゾーン設定
+#volumes: # トップレベルにvolumesセクションを追加
+#-   postgres_data:
