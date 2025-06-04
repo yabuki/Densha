@@ -26,5 +26,5 @@ Densha は、Denoを使って社会保険(shakai hoken)の計算を行うプロ�
 
 コンテナ内部に入ったら、
 
-`psql -U postgres -d sample_db` で\dをいれてテーブル一覧を出してみましょう。
+`psql -U postgres -d sample_db` を実行し、プロンプトが出たら、`\d`でテーブル一覧を出してみましょう。
 
