@@ -20,7 +20,7 @@ Densha は、Denoを使って社会保険(shakai hoken)の計算を行うプロ�
 
 ## psqlにはいるには
 
-- ``podman exec -it コンテナ名 bash`
+- `podman exec -it コンテナ名 bash`
 - 例
     - `podman exec -it sample-db bash`
 
